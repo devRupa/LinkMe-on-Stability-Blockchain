@@ -1,0 +1,160 @@
+<%- include('layouts/app') %>
+
+
+    <body>
+
+        <div class="col-md-12 body-bg-1">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 col-sm-12  mt-1 div-center ">
+                    <div class="row">
+                        <div class="row col-md-12 screen-div div-center">
+                            <div class="col-md-12 logo text-center">
+                                <a href="https://stabilityprotocol.com" target="_blank">
+                                    <img src="/img/logo.png">
+                                </a>
+
+                            </div>
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div
+                                        class="col-lg-6 col-md-8 col-sm-12 div-center text-center mt-1 mb-4 sub-heading">
+                                        <a href="https://stabilityprotocol.com" target="_blank">
+
+                                            Experience A Web3 Social Graph Powered By Feeless Transactions
+
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 ">
+                                <div class="col-md-2 offset-5 d-flex p-2">
+                                    <label class="switch">
+                                        <input type="checkbox" id="chainType" checked>
+                                        <span class="slider round"></span>
+                                    </label>
+                                <span class='toggle-lebel'
+                                    style='padding-left:3px;padding-top: 4px;color:#cbcbcb;font-weight: normal;'>Zero Gas
+                                    Fee </span>
+                            </div>
+                        </div>
+
+
+                            <div class="col-md-12 zoom-btn-div mr-3">
+                                <!-- <a class="btn zoom-btn zoom"><i class="fa fa-search-plus"></i></a> -->
+                                <!-- <a class="btn zoom-btn zoom-out"><i class="fa fa-search-minus"></i></a> -->
+                                <!-- <a class="btn zoom-btn zoom-init" style="margin-right: 16px;"><i class="fa fa-recycle"></i></a> -->
+                            </div>
+                            <div class="col-md-12">
+
+                                <div id="chartdiv"></div>
+                            </div>
+
+                            <div class="col-lg-7 col-md-10 col-sm-10 div-center"
+                                style="padding-left: 0px; padding-right: 0px;">
+                                <div class="col-md-12 form-box">
+
+                                    <form class="form-horizontal col-md-12" autocomplete="off"
+                                        style="padding-left: 0px; padding-right: 0px;">
+                                        <div id="canvas">
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="control-label col-sm-2 " for="name" data-toggle="tooltip"
+                                                title="Please enter a name to join Stability Network.">Name
+                                                <sup><i class="fa fa-question-circle-o"></i></sup></label>
+                                            <div class="col-md-8 input-div">
+                                                <input type="text" class="form-control" id="name" name="name"
+                                                    placeholder="Enter name">
+                                                <input type="hidden" name="mobile" id="mobile"
+                                                    value="<%= locals.mobile %>">
+                                                <div class="err-name err"></div>
+                                            </div>
+                                            <div class="col-md-1 qr-box">
+                                                <span class="qr"></span>
+                                                <span class="qr-link"></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="control-label col-sm-2 " for="referral" data-toggle="tooltip"
+                                                title="Enter your referral here.">
+                                                Linked To <sup><i class="fa fa-question-circle-o"></i></sup>
+                                            </label>
+                                            <div class="col-md-8 input-div">
+                                                <input type="text" class="form-control" id="referral" name="referral"
+                                                    placeholder="Enter referral" value="<%= locals.referral %>">
+                                                <div class="err-referral err"></div>
+                                            </div>
+                                        </div>
+
+                                        <div class=" btn-div">
+                                            <div class="col-md-12 submit-btn-div">
+                                                <button type="submit" class="btn btn-primary confirm-btn">LINK
+                                                    ME</button>
+                                            </div>
+                                            <div class="col-md-12 text-center wait"
+                                                style="color:#fff;padding-top:30px;font-size: 16px;">
+                                                Processing, please wait... <i class="fa fa-spinner fa-spin"></i>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12 alert text-center">
+                                        </div>
+                                        <div class="col-md-12 stable-txHash-link text-center">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer col-md-7 col-sm-12 div-center">
+                            <div class="row">
+                                <div
+                                    class="footer-links col-md-12 col-sm-9 text-center mt-1 mb-5 footer-left div-center">
+                                    <div> <a href="https://medium.com/stabilitynetwork/building-linkme-on-stability-f92917a67851"
+                                            target="_blank">
+                                            Learn more about <br> how Linkme was built
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 text-center  follow-us">Follow Us On
+
+
+
+                                <a href="https://twitter.com/StabilityInc" target="_blank"> <img
+                                        src="/img/icon/twit.png"></a>
+
+                                <!-- <span id="custom-tooltip">copied!</sapn> -->
+                                <a data-toggle="popover" title=" " href="mailto:contact@stabilityprotocol.com"
+                                    id="copy-email" data-id="contact@stabilityprotocol.com" onclick='copyEmail()'><img
+                                        src="/img/icon/email.png">
+                                </a>
+                                <a href="https://www.linkedin.com/company/stabilitysolutions/about/"
+                                    target="_blank"><img src="/img/icon/ln.png">
+                                </a>
+                            </div>
+
+
+                            <div class="row">
+
+                                <div class="footer-links col-md-12 col-sm-12 text-center mt-4 mb-5 footer-right">
+                                    <!-- <div> <a href="#">Terms and Conditions</a></div> -->
+                                    <div><a target="_blank"
+                                            href="https://docs.google.com/document/d/e/2PACX-1vRRuyqWfxzqxfgWgQ_QM72TJt0hAz6CaI2-o7IIZsYBCd0HY0l7E638B5O5_mAsSA/pub">Privacy
+                                            Policy</a></div>
+                                    <!-- <div> <a href="#">Cookie Policy</a></div> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/js/main.js"></script>
+
+    </body>
+
+    </html>
