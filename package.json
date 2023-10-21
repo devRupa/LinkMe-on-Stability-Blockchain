@@ -1,0 +1,29 @@
+{
+  "name": "linkme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "browser-detect": "^0.2.28",
+    "canvas": "^2.11.2",
+    "circular-json": "^0.5.9",
+    "ejs": "^3.1.9",
+    "ethereumjs-common": "^1.5.2",
+    "ethereumjs-tx": "^2.1.2",
+    "ethers": "^5.4.0",
+    "express": "^4.18.2",
+    "mongoose": "^7.5.1",
+    "nodemon": "^3.0.1",
+    "qrcode": "^1.5.3",
+    "sha1": "^1.1.1",
+    "web3": "^1.8.2"
+  }
+}
